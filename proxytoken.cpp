@@ -27,10 +27,8 @@ public:
             string cMemo = t.memo;
             string stringName(getAccountNameFromMemo(cMemo));
             account_name to = string_to_name(stringName.c_str());
-            if(is_account(to)){
-                string memo = cMemo.replace(0, cMemo.size() > stringName.size() ? stringName.size()+1 : stringName.size(), "");
-                INLINE_ACTION_SENDER(eosio::token, transfer)( code, {{_self,N(active)}}, {_self, to, t.quantity, memo} );
-            }
+            string memo = cMemo.replace(0, cMemo.size() > stringName.size() ? stringName.size()+1 : stringName.size(), "");
+            INLINE_ACTION_SENDER(eosio::token, transfer)( code, {{_self,N(active)}}, {_self, to, t.quantity, memo} );
         }
     }
 
