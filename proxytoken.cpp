@@ -29,7 +29,7 @@ public:
                 string stringName(getAccountNameFromMemo(cMemo));
                 account_name to = string_to_name(stringName.c_str());
                 string memo = cMemo.replace(0, cMemo.size() > stringName.size() ? stringName.size()+1 : stringName.size(), "");
-                INLINE_ACTION_SENDER(eosio::token::token, transfer)( N(eosio.token), {{_self,N(active)}}, {_self, to, t.quantity, memo} );
+                INLINE_ACTION_SENDER(eosio::token, transfer)( N(eosio.token), {{_self,N(active)}}, {_self, to, t.quantity, memo} );
             }
             else eosio_assert(false, "This contract only accepts EOS tokens");
         }
