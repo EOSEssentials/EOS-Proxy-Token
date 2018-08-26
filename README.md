@@ -42,13 +42,14 @@ cleos transfer YOURACCOUNT tknproxytest "1.0000 EOS" "YOURACCOUNT this is a memo
 
 
 ## People helped make this happen
-Todd Fleming
-EOSBet
-Nathan Rempel ( genereos )
-Jesta ( Greymass )
-Igor ( EOS Rio )
-Syed ( EOS Cafe )
-Michael Yeates ( eosDac )
+- Todd Fleming
+- EOSBet
+- Nathan Rempel ( genereos )
+- Jesta ( Greymass )
+- Igor ( EOS Rio )
+- Syed ( EOS Cafe )
+- Michael Yeates ( eosDac )
+- nsjames ( Scatter )
 
 
 
