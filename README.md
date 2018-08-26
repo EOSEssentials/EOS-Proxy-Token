@@ -1,5 +1,22 @@
 # Proxy Token
 
+### You can use this on mainnet!
+
+- `safetransfer`
+
+If you want to be sure the person you're sending tokens to can't steal your RAM send it through the `safetransfer`
+account and add the user you want to send tokens to as the memo. 
+
+**IMPORTANT: Do not interact with dapps through this. If you do they will act as if they are interacting with this contract, 
+and not with you.** 
+
+
+------------
+
+
+
+## What this is
+
 Put this contract onto an account with no available RAM and then use it to proxy token transfers from your 
 dapp to users that might have code installed.
 
