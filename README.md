@@ -67,7 +67,7 @@ cleos transfer YOURACCOUNT tknproxytest "1.0000 EOS" "YOURACCOUNT this is a memo
 
 You can do this from a smart contract without using this intermediate proxy.
 
-Solution from Todd Fleming and Bart Wyatt:
+Solution relayed from Bart Wyatt by Todd Fleming:
 
 > "Inline transfer to proxy, then inline transfer from proxy. 
 Proxy’s active would delegate to contract’s eosio.code
