@@ -61,6 +61,17 @@ You can easily test this on the mainnet by sending tokens to the `tknproxytest` 
 cleos transfer YOURACCOUNT tknproxytest "1.0000 EOS" "YOURACCOUNT this is a memo"
 ``` 
 
+## Alternative options
+
+You can do this from a smart contract without using this intermediate proxy.
+
+Solution from Todd Fleming and Bart Wyatt:
+
+> "Inline transfer to proxy, then inline transfer from proxy. 
+Proxy’s active would delegate to contract’s eosio.code
+The original contract would issue both transfers, but with a different auth."
+
+
 
 ## People helped make this happen
 - Todd Fleming
@@ -71,6 +82,8 @@ cleos transfer YOURACCOUNT tknproxytest "1.0000 EOS" "YOURACCOUNT this is a memo
 - Syed ( EOS Cafe )
 - Michael Yeates ( eosDac )
 - nsjames ( Scatter )
+
+
 
 
 
