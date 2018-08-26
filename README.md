@@ -31,6 +31,10 @@ By sending tokens to a proxy account with no available RAM, and with a memo wher
 is the account you eventually want to send the tokens to, the only account they can assume database row 
 permissions for is the proxy, which has no RAM. 
 
+
+------------------
+
+
 ## Token types
 This contract accepts all token types that conform to the basic `eosio.token` contract.
 The only method that has to have an identical argument signature is the `transfer` method. 
