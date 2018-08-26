@@ -73,7 +73,7 @@ The original contract would issue both transfers, but with a different auth."
 
 
 
-## People helped make this happen
+## People that helped make this happen
 - Todd Fleming
 - EOSBet
 - Nathan Rempel ( genereos )
