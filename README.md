@@ -85,5 +85,14 @@ The original contract would issue both transfers, but with a different auth."
 
 
 
+## Things that *didn't* work.
+
+- There's no way to check an account's `code_hash` from within a smart contract currently.
+- There's no way to check an account's `last_code_update` from within a smart contract currently.
+- We had an idea for an oracle, we built it out and it worked well and was easy to use from smart 
+contracts, however if a malicious actor used a batch transaction to both `setcode` and get tokens from 
+a dapp then the oracle solution would fail.
+
+
 
 
