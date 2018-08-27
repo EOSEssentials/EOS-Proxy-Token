@@ -4,7 +4,7 @@
 
 - `safetransfer`
 
-If you want to be sure the person you're sending tokens to can't steal your RAM send it through the `safetransfer`
+If you want to be sure the person you're sending tokens to can't lock up your RAM send it through the `safetransfer`
 account and add the user you want to send tokens to as the memo. 
 
 Once we are sure this contract is stable the keys to the account will be set to dummy keys. ( making no one able to change it )
