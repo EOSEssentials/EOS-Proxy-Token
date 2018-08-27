@@ -25,7 +25,7 @@ dapp to users that might have code installed.
 ### The problem
 
 A malicious user can install code on their account which will allow them to insert rows in the name of another
-account sending them tokens. This lets them steal RAM by inserting large amounts of garbage into rows when dapps/users 
+account sending them tokens. This lets them lock up RAM by inserting large amounts of garbage into rows when dapps/users 
 send them tokens.
 
 ### The solution
