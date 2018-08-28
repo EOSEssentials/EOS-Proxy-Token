@@ -98,3 +98,29 @@ a dapp then the oracle solution would fail.
 
 
 
+## Need a way to convert account names to strings?
+
+The guys from EOS Bet threw this together.
+
+
+```
+
+    std::string name_to_string(uint64_t acct_int) const {
+       static const char* charmap = ".12345abcdefghijklmnopqrstuvwxyz";
+
+        std::string str(13,'.');
+
+        uint64_t tmp = acct_int;
+
+        for( uint32_t i = 0; i <= 12; ++i ) {
+           char c = charmap[tmp & (i == 0 ? 0x0f : 0x1f)];
+           str[12-i] = c;
+           tmp »= (i == 0 ? 4 : 5);
+        }
+
+        boost::algorithm::trim_right_if( str, []( char c ){ return c == '.'; } );
+        return str;
+     }
+```
+
+
