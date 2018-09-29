@@ -4,7 +4,7 @@
 
 - `safetransfer`
 
-If you want to be sure the person you're sending tokens to can't steal your RAM send it through the `safetransfer`
+If you want to be sure the person you're sending tokens to can't lock up your RAM send it through the `safetransfer`
 account and add the user you want to send tokens to as the memo. 
 
 Once we are sure this contract is stable the keys to the account will be set to dummy keys. ( making no one able to change it )
@@ -25,7 +25,7 @@ dapp to users that might have code installed.
 ### The problem
 
 A malicious user can install code on their account which will allow them to insert rows in the name of another
-account sending them tokens. This lets them steal RAM by inserting large amounts of garbage into rows when dapps/users 
+account sending them tokens. This lets them lock up RAM by inserting large amounts of garbage into rows when dapps/users 
 send them tokens.
 
 ### The solution
@@ -96,5 +96,31 @@ contracts, however if a malicious actor used a batch transaction to both `setcod
 a dapp then the oracle solution would fail.
 
 
+
+
+## Need a way to convert account names to strings?
+
+The guys from EOS Bet threw this together.
+
+
+```
+
+    std::string name_to_string(uint64_t acct_int) const {
+       static const char* charmap = ".12345abcdefghijklmnopqrstuvwxyz";
+
+        std::string str(13,'.');
+
+        uint64_t tmp = acct_int;
+
+        for( uint32_t i = 0; i <= 12; ++i ) {
+           char c = charmap[tmp & (i == 0 ? 0x0f : 0x1f)];
+           str[12-i] = c;
+           tmp »= (i == 0 ? 4 : 5);
+        }
+
+        boost::algorithm::trim_right_if( str, []( char c ){ return c == '.'; } );
+        return str;
+     }
+```
 
 
