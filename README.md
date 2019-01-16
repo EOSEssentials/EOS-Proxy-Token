@@ -115,7 +115,7 @@ The guys from EOS Bet threw this together.
         for( uint32_t i = 0; i <= 12; ++i ) {
            char c = charmap[tmp & (i == 0 ? 0x0f : 0x1f)];
            str[12-i] = c;
-           tmp »= (i == 0 ? 4 : 5);
+           tmp >>= (i == 0 ? 4 : 5);
         }
 
         boost::algorithm::trim_right_if( str, []( char c ){ return c == '.'; } );
